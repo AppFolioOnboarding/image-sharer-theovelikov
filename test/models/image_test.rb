@@ -17,4 +17,5 @@ class ImageTest < ActiveSupport::TestCase
     assert_predicate image, :valid?
   end
 
+
 end
