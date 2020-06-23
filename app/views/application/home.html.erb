@@ -1,1 +1,4 @@
-Hello World
+<% @all_images.each do |image| %>
+<img src=<%=image.url %> , width="400">
+  <br>
+<%end %>
