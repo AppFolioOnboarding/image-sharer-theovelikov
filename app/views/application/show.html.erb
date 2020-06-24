@@ -1,1 +1,4 @@
 <img src=<%=@image.url %>>
+<% @image.tag_list.each do |tag| %>
+    <div class="js-tags"><%= tag %></div>
+<%end%>
