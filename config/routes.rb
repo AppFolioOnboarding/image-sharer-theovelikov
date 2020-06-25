@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root 'application#home'
   get 'application/home'
   resources :images, only: %i[show new create]
+  get '/tagged', to: 'images#tagged', as: :tagged
 end

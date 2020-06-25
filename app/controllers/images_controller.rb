@@ -17,6 +17,10 @@ class ImagesController < ApplicationController
     end
   end
 
+  def tagged
+    @image = Image.tagged_with(params[:tag])
+  end
+
   private
 
   def image_params
