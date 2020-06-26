@@ -1,0 +1,7 @@
+<% @all_images.each do |image| %>
+<img src=<%=image.url %> width="400">
+  <% image.tag_list.each do |tag| %>
+     <div class="js-tags"><%= link_to tag, tagged_path(tag: tag) %></div>
+    <% end %>
+  <br>
+<%end %>
