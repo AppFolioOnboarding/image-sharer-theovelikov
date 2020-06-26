@@ -3,6 +3,10 @@ class ImagesController < ApplicationController
     @image = Image.find(params[:id])
   end
 
+  def index
+    @all_images = Image.all.order(created_at: :desc)
+  end
+
   def new
     @image = Image.new
   end
@@ -18,7 +22,7 @@ class ImagesController < ApplicationController
   end
 
   def tagged
-    @image = Image.tagged_with(params[:tag])
+    @image = Image.tagged_with(params[:tag]).order(created_at: :desc)
   end
 
   private
